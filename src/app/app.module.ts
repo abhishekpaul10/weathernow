@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { LocationserverService } from './services/locationserver.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [LocationserverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
